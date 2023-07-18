@@ -1,5 +1,5 @@
 import PostPreview from "@/components/PostPreview";
-import getPostMetadata from "@/components/getPostMetadata";
+import getPostMetadata from "@/helpers/getPostMetadata";
 import Link from "next/link";
 
 export default function Home() {

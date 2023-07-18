@@ -1,4 +1,4 @@
-import getPostMetadata from "@/components/getPostMetadata";
+import getPostMetadata from "@/helpers/getPostMetadata";
 import fs from "fs";
 import matter from "gray-matter";
 import Markdown from "markdown-to-jsx";
