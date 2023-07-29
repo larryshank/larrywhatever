@@ -22,12 +22,18 @@ export default function RootLayout({
     </footer>
   );
 
-  // TODO: const header =
+  const header = (
+    <div className="sticky top-0 bg-white border-b w-full flex justify-end gap-5 pr-5 font-bold">
+      <div>Pics</div>
+      <div>About</div>
+    </div>
+  );
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="mx-auto max-w-2xl px-6">
+        {header}
+        <div>
           {children}
           {footer}
         </div>
