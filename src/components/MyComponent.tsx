@@ -1,5 +1,5 @@
 const MyComponent = () => {
-  <h1>HELLLO!!!!!!</h1>;
+  <h1>HI!!!!!!</h1>;
 };
 
 export default MyComponent;
