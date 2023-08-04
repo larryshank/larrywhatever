@@ -1,8 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Libre_Baskerville, Outfit } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const libre = Libre_Baskerville({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-libre",
+  weight: "400",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-outfit",
+});
 
 export const metadata: Metadata = {
   title: "Larry Whatever",
@@ -31,7 +42,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${outfit.variable} ${libre.variable} font-sans`}>
         {header}
         <div>
           {children}
