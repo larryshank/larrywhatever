@@ -1,5 +1,5 @@
 const Hero = () => {
-  return <div className="w-full h-[50vh] bg-slate-300"></div>;
+  return <div className="h-[50vh] w-full bg-slate-300"></div>;
 };
 
 export default Hero;

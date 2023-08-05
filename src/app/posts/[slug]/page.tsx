@@ -28,7 +28,7 @@ const PostPage = (props: any) => {
       <Link href="/">
         <h1 className="text-2xl text-violet-600">{post.data.title}</h1>
       </Link>
-      <article className="prose 1g:prose-xl">
+      <article className="1g:prose-xl prose">
         <Markdown>{post.content}</Markdown>
       </article>
     </div>

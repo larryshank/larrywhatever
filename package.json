@@ -32,6 +32,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "eslint-config-prettier": "^8.10.0",
-    "prettier": "^3.0.1"
+    "prettier": "^3.0.1",
+    "prettier-plugin-tailwindcss": "^0.4.1"
   }
 }

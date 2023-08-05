@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <h1 className="font-extrabold text-9xl text-center my-5">
+      <h1 className="my-5 text-center text-9xl font-extrabold">
         LARRY WHATEVER
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto px-10">
+      <div className="mx-auto grid grid-cols-1 gap-10 px-10 md:grid-cols-2">
         {postPreviews}
       </div>
     </>
