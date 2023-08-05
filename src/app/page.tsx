@@ -1,12 +1,12 @@
-import Hero from '@/components/Hero'
-import PostPreview from '@/components/PostPreview'
-import getPostMetadata from '@/helpers/getPostMetadata'
+import Hero from '@/components/Hero';
+import PostPreview from '@/components/PostPreview';
+import getPostMetadata from '@/helpers/getPostMetadata';
 
 export default function Home() {
-  const postMetadata = getPostMetadata()
+  const postMetadata = getPostMetadata();
   const postPreviews = postMetadata.map((post) => (
     <PostPreview key={post.slug} {...post} />
-  ))
+  ));
 
   return (
     <>
@@ -18,5 +18,5 @@ export default function Home() {
         {postPreviews}
       </div>
     </>
-  )
+  );
 }
