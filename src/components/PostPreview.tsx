@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { PostMetadata } from "../types/PostMetadata";
+import Link from 'next/link'
+import { PostMetadata } from '../types/PostMetadata'
 
 const PostPreview = (props: PostMetadata) => {
   return (
@@ -15,7 +15,7 @@ const PostPreview = (props: PostMetadata) => {
 
       <p className="text-slate-700">{props.subtitle}</p>
     </Link>
-  );
-};
+  )
+}
 
-export default PostPreview;
+export default PostPreview

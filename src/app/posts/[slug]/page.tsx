@@ -1,28 +1,28 @@
-import getPostMetadata from "@/helpers/getPostMetadata";
-import fs from "fs";
-import matter from "gray-matter";
-import Markdown from "markdown-to-jsx";
-import Link from "next/link";
+import getPostMetadata from '@/helpers/getPostMetadata'
+import fs from 'fs'
+import matter from 'gray-matter'
+import Markdown from 'markdown-to-jsx'
+import Link from 'next/link'
 
 const getPostContent = (slug: string) => {
-  const folder = "src/posts/";
-  const file = `${folder}${slug}.mdx`;
-  const content = fs.readFileSync(file, "utf8");
-  const matterResult = matter(content);
-  return matterResult;
-};
+  const folder = 'src/posts/'
+  const file = `${folder}${slug}.mdx`
+  const content = fs.readFileSync(file, 'utf8')
+  const matterResult = matter(content)
+  return matterResult
+}
 
 // Makes static (NOT SSG OR Client side)
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata();
+  const posts = getPostMetadata()
   return posts.map((post) => ({
     slug: post.slug,
-  }));
-};
+  }))
+}
 
 const PostPage = (props: any) => {
-  const slug = props.params.slug;
-  const post = getPostContent(slug);
+  const slug = props.params.slug
+  const post = getPostContent(slug)
   return (
     <div>
       <Link href="/">
@@ -32,7 +32,7 @@ const PostPage = (props: any) => {
         <Markdown>{post.content}</Markdown>
       </article>
     </div>
-  );
-};
+  )
+}
 
-export default PostPage;
+export default PostPage
