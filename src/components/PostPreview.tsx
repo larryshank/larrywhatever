@@ -2,31 +2,56 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PostMetadata } from '../types/PostMetadata';
 
-const PostPreview = ({ slug, date, title, subtitle, image }: PostMetadata) => {
-  console.log(image);
+const PostPreview = ({
+  slug,
+  date,
+  title,
+  subtitle,
+  image,
+  tags,
+}: PostMetadata) => {
+  const postTags = tags?.split(',');
   return (
-    <Link href={`/posts/${slug}`} key={slug}>
+    <div>
       <div className="flex justify-between text-slate-400">
         <p>
           <span className="text-bold text-black">Tags: </span>
-          Skiing, Hockey, Soccer
+          {postTags?.map((tag) => (
+            // TODO: adjust href to link to the tag
+            <Link
+              href={`https://tailwindcss.com/docs/height`}
+              key={tag}
+              className="hover:underline"
+            >
+              {`#${tag} `}
+            </Link>
+          ))}
         </p>
         <p>{date}</p>
       </div>
 
-      <div className="border-b border-black" />
+      <Link href={`/posts/${slug}`} key={slug}>
+        <div className="border-b border-black" />
+        <h2 className="mt-5 font-serif text-4xl font-bold hover:underline">
+          {title}
+        </h2>
 
-      <h2 className="mt-5 font-serif text-4xl font-bold hover:underline">
-        {title}
-      </h2>
+        {image && (
+          <div className="relative mt-5 h-[50vh] w-full overflow-hidden">
+            <Image
+              src={image}
+              alt="Post Preview Image"
+              fill={true}
+              objectFit="cover"
+              quality={100}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+        )}
 
-      {/* TODO: Make div for image container */}
-      {image && (
-        <Image src={image} alt="Post Preview Image" width="100" height="100" />
-      )}
-
-      <p className="mt-3 text-slate-700">{subtitle}</p>
-    </Link>
+        <p className="mt-3 text-slate-700">{subtitle}</p>
+      </Link>
+    </div>
   );
 };
 
