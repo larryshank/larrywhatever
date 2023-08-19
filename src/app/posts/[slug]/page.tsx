@@ -24,12 +24,15 @@ const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <Link href="/">
-        <h1 className="text-2xl text-violet-600">{post.data.title}</h1>
+        <h1 className="mt-5 font-serif text-4xl font-bold">
+          {post.data.title}
+        </h1>
+        <div className="mt-2 border-b border-black" />
       </Link>
-      <article className="1g:prose-xl prose">
-        <Markdown>{post.content}</Markdown>
+      <article className="lg:prose-l prose w-[95vw] prose-a:text-blue-600 prose-img:mx-auto">
+        <Markdown className="px-5">{post.content}</Markdown>
       </article>
     </div>
   );

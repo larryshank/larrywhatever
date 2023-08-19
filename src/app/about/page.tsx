@@ -1,7 +1,7 @@
-import getPostMetadata from '@/helpers/getPostMetadata';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const getPostContent = () => {
@@ -33,12 +33,24 @@ const AboutPage = (props: any) => {
   return (
     <div>
       {header}
-      <Link href="/">
-        <h1 className="text-2xl text-violet-600">{post.data.title}</h1>
-      </Link>
-      <article className="1g:prose-xl prose">
-        <Markdown>{post.content}</Markdown>
-      </article>
+      <div className="flex justify-center">
+        <Link href="/">
+          <h1 className="mt-5 text-4xl font-bold">{post.data.title}</h1>
+        </Link>
+      </div>
+      <div className="mx-auto grid grid-cols-1 gap-10 px-10 md:grid-cols-2">
+        <article className="1g:prose-xl prose justify-self-center">
+          <Markdown>{post.content}</Markdown>
+        </article>
+        <Image
+          className="justify-self-center"
+          src="/images/about_me.jpeg"
+          width={200}
+          height={200}
+          alt="Me"
+          quality={100}
+        />
+      </div>
     </div>
   );
 };
