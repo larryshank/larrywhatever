@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Libre_Baskerville, Outfit } from 'next/font/google';
-import Link from 'next/link';
 import './globals.css';
 
 const libre = Libre_Baskerville({

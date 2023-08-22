@@ -34,9 +34,7 @@ const AboutPage = (props: any) => {
     <div>
       {header}
       <div className="flex justify-center">
-        <Link href="/">
-          <h1 className="mt-5 text-4xl font-bold">{post.data.title}</h1>
-        </Link>
+        <h1 className="my-5 text-4xl font-bold">{post.data.title}</h1>
       </div>
       <div className="mx-auto grid grid-cols-1 gap-10 px-10 md:grid-cols-2">
         <article className="1g:prose-xl prose justify-self-center">
@@ -45,8 +43,8 @@ const AboutPage = (props: any) => {
         <Image
           className="justify-self-center"
           src="/images/about_me.jpeg"
-          width={200}
-          height={200}
+          width={400}
+          height={400}
           alt="Me"
           quality={100}
         />

@@ -18,11 +18,7 @@ const PostPreview = ({
           <span className="text-bold text-black">Tags: </span>
           {postTags?.map((tag) => (
             // TODO: adjust href to link to the tag
-            <Link
-              href={`https://tailwindcss.com/docs/height`}
-              key={tag}
-              className="hover:underline"
-            >
+            <Link href={`/${tag}`} key={tag} className="hover:underline">
               {`#${tag} `}
             </Link>
           ))}
