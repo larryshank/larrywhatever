@@ -11,7 +11,7 @@ export default function Home() {
 
   const header = (
     <div className="sticky top-0 z-10 flex w-full justify-end gap-5 border-b bg-white py-2 pr-5 font-bold">
-      <div>Pics</div>
+      {/* <div>Pics</div> */}
       <Link href="/about">About</Link>
     </div>
   );
