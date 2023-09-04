@@ -6,10 +6,10 @@ const Hero = () => {
       <Image
         src="/images/mountain_hero.jpeg"
         alt="Post Preview Image"
+        className="object-cover object-[0,70%]"
         fill={true}
-        objectFit="cover"
+        priority
         quality={100}
-        objectPosition="0 70%"
       />
     </div>
   );
