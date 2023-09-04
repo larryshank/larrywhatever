@@ -25,7 +25,7 @@ const PostsByTag = (props: any) => {
     <>
       {header}
       <Hero />
-      <h1 className="my-5 text-center text-9xl font-extrabold">
+      <h1 className="my-5 text-center text-5xl font-extrabold md:text-9xl">
         {tag.toUpperCase()}
       </h1>
       <div className="mx-auto grid grid-cols-1 gap-10 px-10 md:grid-cols-2">

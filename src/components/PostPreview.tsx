@@ -36,8 +36,9 @@ const PostPreview = ({
             <Image
               src={image}
               alt="Post Preview Image"
+              className="object-cover"
               fill={true}
-              objectFit="cover"
+              // objectFit="cover"
               quality={100}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />

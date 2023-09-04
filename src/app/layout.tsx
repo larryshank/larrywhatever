@@ -5,6 +5,7 @@ import './globals.css';
 const libre = Libre_Baskerville({
   subsets: ['latin'],
   display: 'swap',
+  preload: false,
   variable: '--font-libre',
   weight: '400',
 });
@@ -12,6 +13,7 @@ const libre = Libre_Baskerville({
 const outfit = Outfit({
   subsets: ['latin'],
   display: 'swap',
+  preload: false,
   variable: '--font-outfit',
 });
 
@@ -28,7 +30,7 @@ export default function RootLayout({
   const footer = (
     <footer>
       <div className="mt-6 border-t border-slate-500 py-6 text-center text-slate-400">
-        <p>Copyright 2023 Larry Ditton</p>
+        <p>Copyright 2023 Larry Wherever</p>
       </div>
     </footer>
   );
