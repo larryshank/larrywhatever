@@ -1,10 +1,11 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import { DateTime } from 'luxon';
+import path from 'path';
 import { PostMetadata } from '../types/PostMetadata';
 
 const getPostMetadata = (): PostMetadata[] => {
-  const folder = 'src/posts/';
+  const folder = path.join(process.cwd(), 'src/posts/');
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith('.mdx'));
 
