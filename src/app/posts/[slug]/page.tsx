@@ -20,7 +20,7 @@ const PostPage = (props: any) => {
         <h1 className="m-5 font-serif text-4xl font-bold">{post.data.title}</h1>
         <div className="mt-2 border-b border-black" />
       </div>
-      <article className="lg:prose-l prose w-[95vw] prose-a:text-blue-600 prose-img:mx-auto">
+      <article className="prose w-[95vw] lg:prose-lg prose-a:text-blue-600 prose-img:mx-auto">
         <Markdown className="px-5">{post.content}</Markdown>
       </article>
     </div>
