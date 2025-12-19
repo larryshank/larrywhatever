@@ -1,8 +1,8 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import MarkdownRenderer from '@/components/MarkdownRenderer';
 
 const getPostContent = () => {
   const file = `src/articles/about.mdx`;
@@ -27,9 +27,10 @@ const AboutPage = (props: any) => {
         <h1 className="my-5 text-4xl font-bold">{post.data.title}</h1>
       </div>
       <div className="mx-auto grid grid-cols-1 gap-10 px-10 md:grid-cols-2">
-        <article className="1g:prose-xl prose justify-self-center">
-          <Markdown>{post.content}</Markdown>
-        </article>
+        <MarkdownRenderer
+          content={post.content}
+          articleClassName="1g:prose-xl prose justify-self-center"
+        />
         <Image
           alt="Me"
           className="h-[400px] w-auto justify-self-center"
